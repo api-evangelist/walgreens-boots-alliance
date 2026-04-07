@@ -1,7 +1,12 @@
 aid: walgreens-boots-alliance
-url: https://raw.githubusercontent.com/api-evangelist/walgreens-boots-alliance/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/walgreens-boots-alliance/refs/heads/main/apis.yml
 modified: '2026-03-24'
 apis: []
 common:
   - type: Website
     url: https://www.walgreens-boots-alliance.com
+description: >-
+  Walgreens Boots Alliance is the first global pharmacy-led, health and wellbeing
+  enterprise, with operations including retail pharmacy chains, pharmaceutical wholesale,
+  and distribution.
