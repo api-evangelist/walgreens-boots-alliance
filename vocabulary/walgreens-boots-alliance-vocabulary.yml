@@ -1,0 +1,86 @@
+info:
+  title: Walgreens Boots Alliance Vocabulary
+  description: >-
+    Vocabulary and taxonomy for Walgreens Boots Alliance covering global pharmacy,
+    specialty healthcare, population health management, pharmaceutical wholesale,
+    and digital health domains across Walgreens (US) and Boots (UK) operations.
+  version: 1.0.0
+  created: '2026-05-03'
+  modified: '2026-05-03'
+
+domains:
+  - name: Global Pharmacy Operations
+    description: Pharmacy operations terminology across Walgreens and Boots brands
+    terms:
+      - term: Walgreens
+        definition: US retail pharmacy chain operated by Walgreens Boots Alliance with 8,000+ locations
+      - term: Boots
+        definition: UK retail pharmacy and health beauty chain operated by Walgreens Boots Alliance
+      - term: Alliance Healthcare
+        definition: WBA's pharmaceutical wholesale and distribution business operating across Europe
+      - term: Retail Pharmacy
+        definition: Community-based pharmacy providing prescription dispensing, over-the-counter medications, and health services
+      - term: Specialty Pharmacy
+        definition: >-
+          Pharmacy service specializing in high-cost, complex medications for chronic conditions
+          including oncology, rare diseases, multiple sclerosis, and specialty biologics
+      - term: Pharmaceutical Wholesale
+        definition: Distribution and supply chain management for pharmaceutical products to pharmacies and healthcare providers
+
+  - name: Healthcare Services
+    description: Patient care and healthcare service terminology
+    terms:
+      - term: Medication Therapy Management
+        definition: >-
+          Comprehensive medication review services provided by pharmacists to optimize
+          patient medication regimens and improve outcomes
+        abbreviation: MTM
+      - term: Population Health Management
+        definition: >-
+          Data-driven approach to improving health outcomes for defined patient populations
+          through coordinated care, analytics, and intervention programs
+        abbreviation: PHM
+      - term: Value-Based Care
+        definition: >-
+          Healthcare delivery model that ties provider reimbursement to quality metrics
+          and patient outcomes rather than volume of services
+      - term: Pharmacy Benefit Management
+        definition: >-
+          Administration of prescription drug programs for health insurers, employers,
+          and government programs including formulary management and claims processing
+        abbreviation: PBM
+      - term: Digital Health Assurance
+        definition: >-
+          WBA's initiative providing patients with confidence in the accuracy, safety,
+          and consistency of digital health services and medication management
+
+  - name: Digital Health Platform
+    description: Technology and data platform terminology
+    terms:
+      - term: Customer Data Platform
+        definition: >-
+          Unified data infrastructure consolidating customer interactions, purchase history,
+          and health preferences to enable personalized healthcare and shopping experiences
+        abbreviation: CDP
+      - term: Omnichannel Healthcare
+        definition: >-
+          Integrated healthcare delivery model providing consistent patient experiences
+          across physical pharmacy locations, digital platforms, and telehealth services
+      - term: Personalization
+        definition: >-
+          Use of patient data, AI, and machine learning to deliver individualized
+          healthcare recommendations, offers, and communications
+      - term: Telehealth
+        definition: >-
+          Remote clinical healthcare services delivered through digital channels including
+          video consultations and asynchronous messaging with licensed providers
+
+  - name: Fortune 100 Operations
+    description: Enterprise and corporate operations terminology
+    terms:
+      - term: Fortune 100
+        definition: WBA's designation as one of the 100 largest companies by revenue in the United States
+      - term: Global Footprint
+        definition: WBA's operational presence across 25+ countries through pharmacy retail and wholesale operations
+      - term: Health Wellbeing Enterprise
+        definition: WBA's strategic positioning as a pharmacy-led health and wellbeing company rather than a traditional retail chain
