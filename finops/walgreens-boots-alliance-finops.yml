@@ -8,137 +8,68 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Walgreens Boots Alliance
 providerId: walgreens-boots-alliance
-publisherName: Walgreens Boots Alliance
-serviceCategory: API
+publisherName: Walgreens Boots Alliance, Inc.
+serviceCategory: Pharmacy / Healthcare Holding Company
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Pharmacy
   - Healthcare
-  - Health Wellbeing
   - Retail
-  - Specialty Pharmacy
-  - Population Health
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Walgreens Boots Alliance API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+description: FinOps view of Walgreens Boots Alliance at the holding-company
+  level. WBA does not bill API consumption directly; API-related cost flows
+  are reported by the operating subsidiaries (Walgreens, Boots) under their
+  respective partnership agreements. This artifact records that mapping
+  rather than a direct WBA invoice surface.
+sources:
+  - https://www.walgreensbootsalliance.com/
+  - https://corporate.walgreens.com/
+notes: No corporate-level API invoice; FOCUS attribution flows through the
+  operating-company billing entity (Walgreen Co., Boots UK Limited).
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Custom Contract
+  billingFrequency: Per-Invoice
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
-    - Tax
-    - Credit
     - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
-  ServiceName: Walgreens Boots Alliance
-  ServiceCategory: Developer Tools / API
+  ServiceName: Walgreens Boots Alliance Partnerships
+  ServiceCategory: Pharmacy / Healthcare Holding Company
   ProviderName: Walgreens Boots Alliance
-  PublisherName: Walgreens Boots Alliance
-  InvoiceIssuerName: Walgreens Boots Alliance
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: Walgreens Boots Alliance, Inc.
+  InvoiceIssuerName: Walgreens Boots Alliance, Inc.
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: partnership_settlement
+    description: Negotiated settlement under the bilateral partnership
+      agreement, attributed to the relevant operating company.
+    unit: varies
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
+      - operating_company
       - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
-    dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: WBA Specialty Pharmacy API
-    baseURL: https://api.wba.com
-    tags:
-      - Specialty Pharmacy
-      - Healthcare
-      - Patient Care
-      - Chronic Disease
-    serviceName: WBA Specialty Pharmacy API
-    serviceCategory: API
-  - name: WBA Healthcare Data Platform
-    baseURL: https://api.wba.com
-    tags:
-      - Healthcare Data
-      - Population Health
-      - Digital Health
-      - Analytics
-      - AI
-    serviceName: WBA Healthcare Data Platform
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+principles:
+  - name: Visibility
+    description: Track partnership-level settlements at the WBA holding
+      level; drill into operating-company telemetry (Walgreens, Boots) for
+      per-API observability.
+  - name: Allocation
+    description: Allocate partnership cost / revenue to the operating-company
+      P&L (Walgreens vs Boots) based on the contract's settlement entity.
+  - name: Optimization
+    description: Optimization happens at the operating-company API surface
+      (request volume, conversion); WBA-level levers are renegotiation of
+      the partnership agreement at renewal.
+  - name: Accountability
+    description: Corporate development / partnerships at WBA owns the
+      bilateral agreement; operating-company finance teams own the
+      partnership P&L.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+    url: https://apievangelist.com
