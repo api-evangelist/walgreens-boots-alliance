@@ -69,6 +69,8 @@ apis:
       - type: Documentation
         url: https://www.walgreensbootsalliance.com/news-media/our-stories/digital-health-assurance
 common:
+  - type: DomainSecurity
+    url: security/walgreens-boots-alliance-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/walgreens-boots-alliance
   - type: Website
