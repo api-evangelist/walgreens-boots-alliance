@@ -2,11 +2,11 @@
   "repo": "walgreens-boots-alliance",
   "feeds": [
     {
-      "source": "https://corporate.walgreens.com/newsroom/",
+      "source": "https://corporate.walgreens.com/feed/",
       "feed_url": "https://corporate.walgreens.com/feed/",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "feed"
     },
     {
       "source": "https://www.walgreensbootsalliance.com/investors/annual-reports",
@@ -16,6 +16,6 @@
       "method": "discovered"
     }
   ],
-  "fetched": "2026-06-27T12:03:07Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 1
 }
