@@ -11,9 +11,21 @@ description: >-
   data platforms for population health management, specialty pharmacy integration, and
   digital health services.
 type: Index
+accessModel:
+  pricing: enterprise
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Requires approval
+  confidence: medium
+  source:
+    - plans
+  generated: '2026-07-22'
+  method: derived
 position: Producer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/walgreens-boots-alliance.png
 tags:
   - Pharmacy
   - Healthcare
@@ -22,7 +34,7 @@ tags:
   - Specialty Pharmacy
   - Population Health
 created: '2025-03-01'
-modified: '2026-05-03'
+modified: '2026-07-25'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/walgreens-boots-alliance/refs/heads/main/apis.yml
 specificationVersion: '0.19'
@@ -47,27 +59,6 @@ apis:
         url: https://www.walgreensbootsalliance.com
       - type: Documentation
         url: https://developer.walgreens.com/apis
-  - aid: walgreens-boots-alliance:wba-healthcare-platform
-    name: WBA Healthcare Data Platform
-    description: >-
-      Walgreens Boots Alliance healthcare data and analytics platform supporting
-      population health management, clinical quality initiatives, and digital health
-      services. Leverages data from over 200 million pharmacy transactions and
-      customer interactions annually to support value-based care, medication therapy
-      management, and pharmacy benefit management integrations.
-    humanURL: https://www.walgreensbootsalliance.com/news-media/our-stories/digital-health-assurance
-    baseURL: https://api.wba.com
-    tags:
-      - Healthcare Data
-      - Population Health
-      - Digital Health
-      - Analytics
-      - AI
-    properties:
-      - type: Website
-        url: https://www.walgreensbootsalliance.com
-      - type: Documentation
-        url: https://www.walgreensbootsalliance.com/news-media/our-stories/digital-health-assurance
 common:
   - type: DomainSecurity
     url: security/walgreens-boots-alliance-domain-security.yml
