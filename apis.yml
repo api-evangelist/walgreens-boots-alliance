@@ -31,10 +31,11 @@ accessModel:
   label: Enterprise · Requires approval
   confidence: medium
   source:
+    - {url: 'https://www.walgreensbootsalliance.com', status: 301, note: 'declared website redirects to https://corporate.walgreens.com/ — a different registrable domain (walgreensbootsalliance.com -> walgreens.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
     - plans
   generated: '2026-07-22'
   method: derived
-position: Producer
+position: Producing
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/walgreens-boots-alliance.png
 tags:
